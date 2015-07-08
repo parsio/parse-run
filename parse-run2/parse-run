@@ -1,0 +1,27 @@
+#!/usr/bin/env node
+
+var path = require('path');
+
+var options = {};
+options.app = process.argv[3];
+options.path = path.resolve("./");
+
+var sourceDir = __dirname;
+var modulesPath = path.join(__dirname, "node_modules");
+
+if (process.platform === "win32") {
+  // Windows retains the S**T paths...
+  modulesPath = path.relative(process.cwd(), modulesPath);
+  sourceDir = path.relative(process.cwd(), sourceDir);
+}
+
+
+// Node environment
+process.env.NODE_PATH = [__dirname, options.path, modulesPath, process.env.NODE_PATH].join(path.delimiter);
+process.env.PARSEDEV_APP_PATH = options.path;
+process.env.PARSEDEV_PORT = process.env.PORT || 3001;
+// Silent connect deprecations
+process.env.NODE_ENV = process.env.NODE_ENV || 'test';
+
+require('module').Module._initPaths();
+require("cloud/main");
