@@ -1,0 +1,12 @@
+#!/usr/bin/env node
+/*jshint node:true */
+
+var path = require('path');
+
+var options = {};
+options.app = process.argv[3];
+options.path = path.resolve("./");
+
+process.env.PARSERUN_APP_PATH = options.path;
+
+require('./lib/server');
