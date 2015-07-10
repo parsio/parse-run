@@ -14,15 +14,16 @@ in `config/global.json`
 
 add your javascriptKey:
 
-{
-    "applications":{
-        "myApp": {
-            "applicationId": "MYAPP_ID",
-            "masterKey" : "MY_MASTER_KEY",
-            "javascriptKey": "SET YOUR JS KEY HERE!"
+    {
+        "applications":{
+            "myApp": {
+                "applicationId": "MYAPP_ID",
+                "masterKey" : "MY_MASTER_KEY",
+                "javascriptKey": "SET YOUR JS KEY HERE!"
+            }
         }
     }
-}
+
 and you're done!
 
 
@@ -35,7 +36,9 @@ From your parse app folder, you can now run `parse-run [app name]`, app name is 
     parse-run live
 
 
-## Limitations: As you know, Parse provide hooks (beforeSave, afterSave, beforeDelete, afterDelete) and define functions.
+## Limitations
+
+As you know, Parse provide hooks (beforeSave, afterSave, beforeDelete, afterDelete) and define functions.
 
 Those functions have to be uploaded to the Parse servers using parse deploy or parse develop.
 
