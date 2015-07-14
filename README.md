@@ -1,6 +1,6 @@
 # parse-run
 
-Run parse.com application on localhost and web servers.
+Run parse.com applications on localhost and web servers.
 
 
 ## Installation
