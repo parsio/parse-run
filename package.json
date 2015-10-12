@@ -1,6 +1,6 @@
 {
   "name": "parse-run",
-  "version": "2.0.10",
+  "version": "2.0.11",
   "description": "Run parse.com applications on localhost and web servers",
   "main": "index.js",
   "repository": {
