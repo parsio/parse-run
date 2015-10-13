@@ -2,6 +2,4 @@
 
 var appName = process.argv[2];
 
-console.log(12312312, appName);
-
 require('./').run(appName);

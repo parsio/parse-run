@@ -48,11 +48,9 @@ exports.vhost = function vhost(hostname, server) {
   if (server.onvhost) server.onvhost(hostname);
   return function vhost(req, res, next){
     if (!req.headers.host) return next();
-    console.log(req.headers.host, req.url);
     var host = req.headers.host.split(':')[0];
     if (!regexp.test(host)) return next();
     if ('function' == typeof server) return server(req, res, next);
-    console.log(server.emit);
     server.emit('request', req, res);
   };
 };
