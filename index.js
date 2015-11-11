@@ -26,7 +26,7 @@ exports.runPath = function(appName, appPath, options) {
   require('module').Module._initPaths();
 
 
-  var keys = require("./lib/utils").getConfiguration(appName, appPath);
+  var keys = require("./lib/utils").getConfiguration(appPath, appName);
 
   if (keys && keys.applicationId && keys.javascriptKey && keys.masterKey) {
     Parse.initialize(keys.applicationId, keys.javascriptKey, keys.masterKey);
