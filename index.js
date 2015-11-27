@@ -17,8 +17,8 @@ exports.runPath = function(appName, appPath, options) {
 
 // Node environment
   process.env.NODE_PATH = [appPath, modulesPath, process.env.NODE_PATH].join(path.delimiter);
-  process.env.PARSERUN_APP_PATH = appPath;
-  process.env.PARSERUN_PORT = options.port || process.env.PORT || 3000;
+  process.env.PARSEDEV_APP_PATH = appPath;
+  process.env.PARSEDEV_PORT = options.port || process.env.PORT || 3000;
 // Silent connect deprecations
   process.env.NODE_ENV = process.env.NODE_ENV || 'test';
 
@@ -36,7 +36,7 @@ exports.runPath = function(appName, appPath, options) {
 
   var app = require("cloud/app");
 
-  console.log("[%s] Running on http://localhost:%s/", process.pid, process.env.PARSERUN_PORT);
+  console.log("[%s] Running on http://localhost:%s/", process.pid, process.env.PARSEDEV_PORT);
 
   return app;
 };
