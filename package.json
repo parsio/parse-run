@@ -1,6 +1,6 @@
 {
   "name": "parse-run",
-  "version": "2.0.15",
+  "version": "2.0.16",
   "description": "Run parse.com applications on localhost and web servers",
   "main": "index.js",
   "repository": {
@@ -17,7 +17,6 @@
     "parse-express-cookie-session": "~0.0.3",
     "parse-express-https-redirect": "~0.0.1",
     "parse-express-raw-body": "~0.0.1",
-    "parse-image": "~0.0.4",
     "express": "git://github.com/parsio/express#3.1.0-parse-release",
     "ejs": "~0.8.3",
     "jade": "~0.28.2",
