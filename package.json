@@ -1,6 +1,6 @@
 {
   "name": "parse-run",
-  "version": "2.0.16",
+  "version": "2.0.17",
   "description": "Run parse.com applications on localhost and web servers",
   "main": "index.js",
   "repository": {
@@ -13,20 +13,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "parse-cloud": "~0.0.3",
+    "parse-cloud": "~0.1.0",
     "parse-express-cookie-session": "~0.0.3",
     "parse-express-https-redirect": "~0.0.1",
     "parse-express-raw-body": "~0.0.1",
-    "express": "git://github.com/parsio/express#3.1.0-parse-release",
-    "ejs": "~0.8.3",
-    "jade": "~0.28.2",
-    "underscore": "~1.4.2",
-    "moment": "~1.7.2",
-    "applinks-metatag": "~0.0.0",
-    "mailgun": "git://github.com/flovilmart/parse-mailgun#0.0.2-parse",
-    "mandrill": "git://github.com/flovilmart/parse-mandrill#0.0.1-parse",
-    "sendgrid": "git://github.com/flovilmart/parse-sendgrid#0.0.1-parse",
-    "stripe": "git://github.com/flovilmart/parse-stripe#2.5.0-parse",
-    "twilio": "~1.6.0"
+    "express": "git://github.com/parsio/express#3.1.0-parse-release"
   }
 }
